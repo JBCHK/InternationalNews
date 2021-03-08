@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "./lib/tech_news_usa"
+
+TechNewsUsa::CLI.new.call
+
