@@ -2,8 +2,7 @@ module TechNewsUsa
 class CLI                            
                                      
     def call
-      start
-      #binding.pry      
+      start     
       validator
       indiv_menu
     end
@@ -11,8 +10,8 @@ class CLI
 
 
     def start
-      puts "Enter the country code for a country's top news articles:"
       TechNewsUsa::Article.all.clear
+      puts "Enter the country code for a country's top news articles:"
     end
 
 
@@ -46,13 +45,15 @@ class CLI
 
     def indiv_menu(input)
       article_list(input)
-      puts "Type in the number of your preferred article, or type 'exit' to leave:" 
+      puts "Type in the number of your preferred article. Type in 'menu' to go back to the beginning, or type 'exit' to leave:" 
       @menu_input = gets.strip
       v = @menu_input.to_i - 1 
       if @menu_input.to_i > 0 && TechNewsUsa::Article.all.include?(Article.all[v]) == true
         TechNewsUsa::Article.display(v)
         sleep(1)  
         waitingroom(input)
+      elsif @menu_input == 'menu'
+        call
       elsif @menu_input == 'exit'
         goodbye
       else
@@ -84,12 +85,9 @@ class CLI
  
     def goodbye
       puts "Come back for more international news!"
-      #binding.pry
-        sleep(3)
-       call
+      exit
     end
+
     
  end
 end
-
- 
