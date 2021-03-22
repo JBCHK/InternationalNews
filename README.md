@@ -4,23 +4,16 @@ This gem is used to access the latest international news by country using 2-lett
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'tech_news_usa'
 ```
+Visit https://github.com/JBCHK/InternationalNews.git and clone the URL into your terminal
 
 And then execute:
 
     $ bundle install
 
-Or install it yourself as:
-
-    $ gem install tech_news_usa
-
 ## Usage
 
-TODO: Write usage instructions here
+Run 'ruby bin/see_news' in your terminal to run the program 
 
 ## Development
 
@@ -30,4 +23,5 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[JBCHK]/tech_news_usa.
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/JBCHK/InternationalNews.git.
